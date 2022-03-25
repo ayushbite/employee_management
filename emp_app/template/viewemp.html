@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container-fluid px-0">
+    <h4>hello bhaiys</h4>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Firstname</th>
+      <th scope="col">last_name</th>
+      <th scope="col">dept</th>
+        <th scope="col">salary</th>
+        <th scope="col">bonus</th>
+        <th scope="col">role</th>
+        <th scope="col">phone</th>
+        <th scope="col"> hire_date</th>
+
+
+
+    </tr>
+  </thead>
+       {% for i in emps %}
+  <tbody>
+    <tr>
+      <th scope="row">{{i.id}}</th>
+      <td>{{i.first_name}}</td>
+      <td>{{i.last_name}}</td>
+      <td>{{i.dept}}</td>
+        <td>{{i.salary}}</td>
+      <td>{{i.bonus}}</td>
+      <td>{{i.role}}</td>
+        <td>{{i.phone}}</td>
+      <td>{{i.hire_date}}</td>
+
+    </tr>
+
+  </tbody>
+       {% endfor %}
+</table>
+
+</div>
+
+{% endblock body %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container-fluid px-0">
+  <form action="/addemp" method="post">
+      {% csrf_token %}
+  <div class="mb-3">
+    <label for="id" class="form-label">id</label>
+    <input type="text" class="id" id="id" >
+  </div>
+        <div class="mb-3">
+    <label for="first_name" class="form-label">first_name</label>
+    <input type="text" class="id" name="first_name" >
+  </div>
+      <div class="mb-3">
+    <label for="last_name" class="form-label">last_name</label>
+    <input type="text" class="id" name="last_name" >
+  </div>
+        <div class="mb-3">
+    <label for="id" class="form-label">dept</label>
+    <input type="text" class="id" name="dept" >
+  </div>
+      <div class="mb-3">
+    <label for="role" class="form-label">role</label>
+    <input type="text" class="id" name="role" >
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+{% endblock body %}
